@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/*navbar*/
+nav {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #003566;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 999;
+}
+nav .logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 25px 10px;
+}
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 5px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.tombol {
+  padding: 10px 10px;
+  background-color: #fff;
+  color: #003566;
+}
+
+nav ul li a.tombol:hover {
+  color: #111;
+  background: #ffc300;
+}
+nav ul li a:hover {
+  color: #ffc300;
+}
+nav .menu-btn i {
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+@media (max-width: 1024px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav {
+    height: 50px;
+  }
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 50px;
+    left: -100%;
+    background: #003566;
+    height: 35vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 20px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 15px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: -15px;
+  }
+  nav ul li a:hover {
+    background: none;
+    color: #ffc300;
+  }
+}
+
+/*Hero*/
+.hero img {
+  width: 100%;
+  padding-top: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 920px) {
+  .hero img {
+    padding-top: 50px;
+  }
+}
+
+/*Konten*/
+.container {
+  padding: 0 120px;
+}
+.konten {
+  background: url(img/pettern.png);
+  width: 100%;
+  padding-bottom: 20px;
+}
+.konten h1 {
+  padding: 2rem 0;
+}
+.konten img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+.konten ol li {
+  font-size: 30px;
+  font-weight: 500;
+  padding: 20px 0;
+}
+.konten ol .sub li {
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.konten ol .sub {
+  padding-bottom: 20px;
+}
+.konten p {
+  text-indent: 0.5in;
+}
+@media (max-width: 991px) {
+  .container {
+    padding: 1.5rem 2.5rem;
+  }
+  .konten ol li {
+    font-size: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 2rem;
+  }
+  .konten ol li {
+    font-size: 25px;
+  }
+}
+
+/*Footer*/
+.footer {
+  background-color: #003566;
+  padding: 2rem 0;
+}
+.footer p {
+  color: #fff;
+  text-align: center;
+  margin: auto;
+}
+@media (max-width: 920px) {
+  .footer {
+    padding: 0.01rem 0;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 0.03rem 0;
+  }
+}
